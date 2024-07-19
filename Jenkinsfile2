@@ -18,5 +18,10 @@ node {
             
         }
         
-            
+ post {
+        always {
+            archiveArtifacts artifacts: 'reports/*.html', allowEmptyArchive: true
+            junit 'target/surefire-reports/*.xml'
+        }
+    }           
 }

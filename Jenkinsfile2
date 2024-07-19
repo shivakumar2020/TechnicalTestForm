@@ -5,17 +5,18 @@ node {
         stage ('Compile Stage') {
 
             echo "compiling"
+             sh 'mvn clean compile'
             echo "compilation completed"
+            
         }
 
         stage ('Testing Stage') {
 
+            echo "testing"
+             sh 'mvn test'
             echo "testing completed"
-            echo "testing completed"
+            
         }
-        stage("Deploy") {
-
-                echo "deployment completed"
-            }
+        
             
 }

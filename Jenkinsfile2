@@ -5,7 +5,7 @@ node {
         stage ('Compile Stage') {
 
             echo "compiling"
-             sh 'mvn clean compile'
+             bat 'mvn clean compile'
             echo "compilation completed"
             
         }
@@ -13,7 +13,7 @@ node {
         stage ('Testing Stage') {
 
             echo "testing"
-             sh 'mvn test'
+             bat 'mvn test'
             echo "testing completed"
             
         }

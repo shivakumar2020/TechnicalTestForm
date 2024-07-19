@@ -1,0 +1,11 @@
+bin/
+logs/
+Reports/
+Recording/
+target/
+test-output/
+.project
+.classpath
+.settings/
+.idea/
+Username

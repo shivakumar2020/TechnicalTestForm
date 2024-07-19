@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://your-repo-url.git'
+                git 'https://github.com/shivakumar2020/TechnicalTestForm.git'
             }
         }
         stage('Build') {

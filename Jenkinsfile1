@@ -19,7 +19,7 @@ pipeline {
     }
     post {
         always {
-            archiveArtifacts artifacts: 'reports/*.html', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'reports/AutomatonReport.html', allowEmptyArchive: true
             junit 'target/surefire-reports/*.xml'
         }
     }

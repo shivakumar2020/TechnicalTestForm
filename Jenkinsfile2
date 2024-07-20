@@ -14,7 +14,13 @@ node {
         }
  		post {
 	        always {
-	            archiveArtifacts artifacts: 'reports/AutomationReport.html', allowEmptyArchive: true, followSymlinks: false
+	            publishHTML (target : [allowMissing: false,
+ 				alwaysLinkToLastBuild: true,
+ 				keepAll: true,
+				 reportDir: 'reports',
+ 				reportFiles: 'AutomationReport.html',
+			    reportName: 'TestAutoamtion',
+ 				reportTitles: 'TTest Automation Report'])
 	        }
     }           
 }

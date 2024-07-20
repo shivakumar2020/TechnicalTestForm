@@ -15,6 +15,7 @@ node {
  		post {
 	        always {
 	            archiveArtifacts artifacts: 'reports/*.html', allowEmptyArchive: true
+	            archiveArtifacts artifacts: 'reports/*.html', followSymlinks: false
 	        }
     }           
 }

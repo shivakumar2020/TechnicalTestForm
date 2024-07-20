@@ -12,11 +12,16 @@ node {
              bat 'mvn test'
             echo "testing completed"
         }
-        
-        stage ('Collecting artifacts') {
-            echo "Collection artifacts"
-            archiveArtifacts artifacts:'reports/*.html', allowEmptyArchive: true, fingerprint: true
-            echo "artifacts Collection completed"
-        }
-           
+ 		post {
+	        always {
+	           archiveArtifacts 'reports/*.html', allowEmptyArchive: true
+	        }
+    }
+     publishHTML (target : [allowMissing: false,
+ 				alwaysLinkToLastBuild: true,
+ 				keepAll: true,
+				 reportDir: 'reports',
+ 				reportFiles: 'AutomationReport.html',
+			    reportName: 'TestAutoamtion',
+ 				reportTitles: 'TTest Automation Report'])           
 }

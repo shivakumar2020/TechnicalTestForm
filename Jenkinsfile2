@@ -14,7 +14,7 @@ node {
         }
  		post {
 	        always {
-	            archiveArtifacts artifacts: 'reports/*.html', allowEmptyArchive: true, followSymlinks: false
+	            archiveArtifacts artifacts: 'reports/AutomationReport.html', allowEmptyArchive: true, followSymlinks: false
 	        }
     }           
 }

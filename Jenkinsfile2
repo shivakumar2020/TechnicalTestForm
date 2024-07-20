@@ -1,27 +1,19 @@
 properties([pipelineTriggers([githubPush()])])
-
 node {
         git url: 'https://github.com/shivakumar2020/TechnicalTestForm.git',branch: 'main'
         stage ('Compile Stage') {
-
             echo "compiling"
              bat 'mvn clean compile'
-            echo "compilation completed"
-            
+            echo "compilation completed"          
         }
-
         stage ('Testing Stage') {
-
             echo "testing"
              bat 'mvn test'
             echo "testing completed"
-            
         }
-        
- post {
-        always {
-            archiveArtifacts artifacts: 'reports/*.html', allowEmptyArchive: true
-            junit 'target/surefire-reports/*.xml'
-        }
+ 		post {
+	        always {
+	            archiveArtifacts artifacts: 'reports/*.html', allowEmptyArchive: true
+	        }
     }           
 }

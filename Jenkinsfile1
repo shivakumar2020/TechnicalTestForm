@@ -21,13 +21,14 @@ pipeline {
         always {
             archiveArtifacts artifacts: 'reports/AutomatonReport.html', allowEmptyArchive: true
             junit 'target/surefire-reports/*.xml'
-        }
-    }
-      publishHTML (target : [allowMissing: false,
+            publishHTML (target : [allowMissing: false,
  				alwaysLinkToLastBuild: true,
  				keepAll: true,
 				 reportDir: 'reports',
  				reportFiles: 'AutomationReport.html',
 			    reportName: 'TestAutoamtion',
- 				reportTitles: 'TTest Automation Report'])  
+ 				reportTitles: 'TTest Automation Report']) 
+        }
+    }
+       
 }

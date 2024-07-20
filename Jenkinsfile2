@@ -14,13 +14,14 @@ node {
         }
  		post {
 	        always {
-	            publishHTML (target : [allowMissing: false,
+	           archiveArtifacts 'reports/*.html', allowEmptyArchive: true
+	        }
+    }
+     publishHTML (target : [allowMissing: false,
  				alwaysLinkToLastBuild: true,
  				keepAll: true,
 				 reportDir: 'reports',
  				reportFiles: 'AutomationReport.html',
 			    reportName: 'TestAutoamtion',
- 				reportTitles: 'TTest Automation Report'])
-	        }
-    }           
+ 				reportTitles: 'TTest Automation Report'])           
 }

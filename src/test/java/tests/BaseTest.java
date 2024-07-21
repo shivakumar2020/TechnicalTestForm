@@ -20,16 +20,32 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 
+/**
+ * The Class BaseTest.
+ */
 public class BaseTest {
 
+	/** The cs. */
 	protected ConfiguratorSupport cs = new ConfiguratorSupport("config.properties");
+	
+	/** The browser name. */
 	protected String browserName = cs.getProperty("browser");
+	
+	/** The headless mode. */
 	private String headlessMode = cs.getProperty("headless");
 
+	/** The driver. */
 	protected WebDriver driver;
+	
+	/** The extent. */
 	protected ExtentReports extent;
+	
+	/** The test. */
 	protected ExtentTest test;
 
+	/**
+	 * Sets the up extent.
+	 */
 	@BeforeSuite
 	public void setUpExtent() {
 		ExtentSparkReporter reporter = new ExtentSparkReporter("reports/AutomationReport.html");
@@ -40,6 +56,9 @@ public class BaseTest {
 		extent.setSystemInfo("Tester", "Shiva Kumar");
 	}
 
+	/**
+	 * Sets the up.
+	 */
 	@BeforeMethod
 	public void setUp() {
 		if(browserName == null) {
@@ -84,11 +103,17 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
+	/**
+	 * Tear down.
+	 */
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
 	}
 
+	/**
+	 * Tear down extent.
+	 */
 	@AfterSuite
 	public void tearDownExtent() {
 		extent.flush();

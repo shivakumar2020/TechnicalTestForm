@@ -6,11 +6,26 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * The Class ConfiguratorSupport.
+ */
 public class ConfiguratorSupport {
+	
+	/** The props. */
 	private static Properties props = new Properties();
+	
+	/** The str file name. */
 	private static String strFileName;
+	
+	/** The str value. */
 	private String strValue;
 
+	/**
+	 * Gets the property.
+	 *
+	 * @param strKey the str key
+	 * @return the property
+	 */
 	public String getProperty(String strKey) {
 		try {
 			File f = new File(strFileName);
@@ -26,6 +41,13 @@ public class ConfiguratorSupport {
 		return strValue;
 	}
 
+	/**
+	 * Sets the property.
+	 *
+	 * @param strKey the str key
+	 * @param strValue the str value
+	 * @throws Throwable the throwable
+	 */
 	public void setProperty(String strKey, String strValue) throws Throwable {
 		try {
 			File f = new File(strFileName);
@@ -41,6 +63,11 @@ public class ConfiguratorSupport {
 		}
 	}
 
+	/**
+	 * Removes the property.
+	 *
+	 * @param strKey the str key
+	 */
 	public void removeProperty(String strKey) {
 		try {
 			File f = new File(strFileName);
@@ -56,10 +83,18 @@ public class ConfiguratorSupport {
 		}
 	}
 
+	/**
+	 * Instantiates a new configurator support.
+	 *
+	 * @param strFileName the str file name
+	 */
 	public ConfiguratorSupport(String strFileName) {
 		ConfiguratorSupport.strFileName = strFileName;
 	}
 
+	/**
+	 * Clean.
+	 */
 	public void clean() {
 		props.clear();
 	}

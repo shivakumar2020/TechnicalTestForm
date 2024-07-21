@@ -15,8 +15,17 @@ import java.util.List;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
+/**
+ * The Class FormTest.
+ */
 public class FormTest extends BaseTest {
 
+	/**
+	 * Gets the data.
+	 *
+	 * @return the data
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	@DataProvider(name = "formData")
 	public Object[][] getData() throws IOException {
 		List<CSVRecord> records = CSVFormat.DEFAULT.withFirstRecordAsHeader()
@@ -28,6 +37,11 @@ public class FormTest extends BaseTest {
 		return data;
 	}
 
+	/**
+	 * Test form submission.
+	 *
+	 * @param testData the test data
+	 */
 	@Test(dataProvider = "formData")
 	public void testFormSubmission(java.util.Map<String, String> testData) {
 		test = extent.createTest("Form Submission Test - " + testData.get("firstname"));

@@ -249,7 +249,6 @@ public class FormPage extends BasePage {
 			waitForElement(hobbiesMusic).click();
 		} else if (hobbies.equalsIgnoreCase("reading")) {
 			waitForElement(hobbiesReading).click();
-
 		}
 	}
 

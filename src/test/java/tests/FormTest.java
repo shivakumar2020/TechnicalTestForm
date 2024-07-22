@@ -94,10 +94,9 @@ public class FormTest extends BaseTest {
 			formPage.fillAddress(testData.get("address"));
 			test.log(Status.INFO, "Selected address");
 
-			CommonUtil.waitForMilSeconds(2000);
 			formPage.submitForm();
 			test.log(Status.INFO, "Submitted form");
-
+			
 			try {
 				formPage.verifySuccessfullSubmit();
 				test.log(Status.PASS, "Form submission successful and success message is displayed");

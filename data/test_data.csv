@@ -1,11 +1,6 @@
 firstname,lastname,email,gender,mobile,dob,hobbies,attachment,location,address
 User1,Tester2,testuser1@yahoo.com,male,98765648,01/01/1995,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550251
-,Tester2,testuser1@yahoo.com,male,98765648,01/01/1995,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550252
-User3,,testuser1@yahoo.com,male,98765648,01/01/1995,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550253
-User4,Tester2,,male,98765648,01/01/1995,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550254
-User5,Tester2,testuser1@yahoo.com,,98765648,01/01/1995,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550254
-User6,Tester2,testuser1@yahoo.com,male,,01/01/1995,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550254
-User7,Tester2,testuser1@yahoo.com,male,98765648,01/01/2000,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550254
-User8,Tester2,testuser1@yahoo.com,male,98765648,01/01/1995,,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550254
-User0,Tester2,testuser1@yahoo.com,male,98765648,01/01/2025,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550254
-User10,Tester2,testuser1@yahoo.com,male,98765648,01/01/1995,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550254
+User1,,testuser1@yahoo.com,male,98765648,01/01/1995,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550251
+User1,Tester2,,male,,01/01/1995,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550251
+User1,Tester2,testuser1@yahoo.com,male,98765648,01/01/2025,Music,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550251
+User1,Tester2,testuser1@yahoo.com,male,98765648,01/01/1995,Reading,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550251

@@ -19,7 +19,8 @@ pipeline {
     }
     post {
         always {
-             junit 'target/surefire-reports/*.xml'
+            archiveArtifacts artifacts: 'reports/AutomatonReport.html', allowEmptyArchive: true
+            junit 'target/surefire-reports/*.xml'
             publishHTML (target : [allowMissing: false,
  				alwaysLinkToLastBuild: true,
  				keepAll: true,

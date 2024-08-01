@@ -1,0 +1,6 @@
+firstname,lastname,email,gender,mobile,dob,hobbies,attachment,location,address
+User1,Tester1,testuser1@yahoo.com,male,98765648,01/01/1995,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550251
+User2,,testuser1@yahoo.com,male,98765648,01/01/1995,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550251
+User3,Tester3,,male,98765648,01/01/1995,Sports,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550251
+User4,Tester4,testuser1@yahoo.com,male,98765648,01/01/2025,Music,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550251
+User5,Tester5,testuser1@yahoo.com,male,98765648,01/01/1995,Reading,upload_files/test.jpg,North,506A Serangoon Central #05-24 Singapore 550251

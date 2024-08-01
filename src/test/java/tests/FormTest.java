@@ -75,11 +75,13 @@ public class FormTest extends BaseTest {
 			formPage.fillMobilel(testData.get("mobile"));
 			test.log(Status.INFO, "Selected mobile");
 
-			if (CommonUtil.isFutureDate(testData.get("dob")))
-				test.log(Status.FAIL, "Date of brith can not future date");
-			else {
-				formPage.selectDOB(testData.get("dob"));
-				test.log(Status.INFO, "Selected dob");
+			if (!testData.get("dob").isEmpty() ) {
+				if (CommonUtil.isFutureDate(testData.get("dob")))
+					test.log(Status.FAIL, "Date of brith can not future date");
+				else {
+					formPage.selectDOB(testData.get("dob"));
+					test.log(Status.INFO, "Selected dob");
+				}
 			}
 
 			formPage.selectHobbiesOption(testData.get("hobbies"));
@@ -96,7 +98,7 @@ public class FormTest extends BaseTest {
 
 			formPage.submitForm();
 			test.log(Status.INFO, "Submitted form");
-			
+
 			try {
 				formPage.verifySuccessfullSubmit();
 				test.log(Status.PASS, "Form submission successful and success message is displayed");
@@ -105,7 +107,7 @@ public class FormTest extends BaseTest {
 
 				if (formPage.verifyFirstName())
 					test.log(Status.FAIL, "First Name is required field");
-		
+
 				if (formPage.verifyLastName())
 					test.log(Status.FAIL, "Last Name is required field");
 
@@ -126,9 +128,8 @@ public class FormTest extends BaseTest {
 
 				throw (e);
 			}
-		} catch (
-		Exception e) {
-			//e.printStackTrace();
+		} catch (Exception e) {
+			// e.printStackTrace();
 			test.log(Status.FAIL, "Test failed due to exception: " + e.getMessage());
 			Assert.fail("Test failed due to exception: " + e.getMessage());
 		}

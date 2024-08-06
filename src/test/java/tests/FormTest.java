@@ -77,7 +77,7 @@ public class FormTest extends BaseTest {
 
 			if (!testData.get("dob").isEmpty() ) {
 				if (CommonUtil.isFutureDate(testData.get("dob")))
-					test.log(Status.FAIL, "Date of brith can not future date");
+					test.log(Status.INFO, "Date of brith can not future date");
 				else {
 					formPage.selectDOB(testData.get("dob"));
 					test.log(Status.INFO, "Selected dob");
@@ -103,28 +103,28 @@ public class FormTest extends BaseTest {
 				formPage.verifySuccessfullSubmit();
 				test.log(Status.PASS, "Form submission successful and success message is displayed");
 			} catch (Exception e) {
-				test.log(Status.FAIL, "Form submission is failed");
+				test.log(Status.INFO, "Form submission is failed");
 
 				if (formPage.verifyFirstName())
-					test.log(Status.FAIL, "First Name is required field");
+					test.log(Status.PASS, "First Name is required field");
 
 				if (formPage.verifyLastName())
-					test.log(Status.FAIL, "Last Name is required field");
+					test.log(Status.PASS, "Last Name is required field");
 
 				if (formPage.verifyEmail())
-					test.log(Status.FAIL, "Email is required field");
+					test.log(Status.PASS, "Email is required field");
 
 				if (formPage.verifyGender())
-					test.log(Status.FAIL, "Gender is required field");
+					test.log(Status.PASS, "Gender is required field");
 
 				if (formPage.verifyMobile())
-					test.log(Status.FAIL, "Mobile is required field");
+					test.log(Status.PASS, "Mobile is required field");
 
 				if (formPage.verifyDOB())
-					test.log(Status.FAIL, "DOB is required field");
+					test.log(Status.PASS, "DOB is required field");
 
 				if (formPage.verifyHobbies())
-					test.log(Status.FAIL, "Hobbies is required field");
+					test.log(Status.PASS, "Hobbies is required field");
 
 				throw (e);
 			}

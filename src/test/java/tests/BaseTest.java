@@ -77,9 +77,7 @@ public class BaseTest {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(options);
 		} else if (browserName.equalsIgnoreCase("firefox")) {
-
-			FirefoxOptions options = new FirefoxOptions();
-			
+			FirefoxOptions options = new FirefoxOptions();		
 			if (headlessMode.equalsIgnoreCase("true")) {
 				options.addArguments("--headless");
 			}

@@ -3,7 +3,7 @@ node {
     checkout scm
   }
   stage('SonarQube Analysis') {
-    withSonarQubeEnv() {
+    withSonarQubeEnv('sonarqube') {
       bat "mvn clean verify sonar:sonar -Dsonar.projectKey=TestFormProject -Dsonar.projectName='TestFormProject'"
     }
   }
